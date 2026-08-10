@@ -86,7 +86,7 @@ void printRanking(double n)
 
 int main(void)
 {
-    double testValues[] = { 10, 100, 1000, 1e4, 1e5, 1e6, 1e7, 1e8 };
+    double testValues[] = {1e4, 1e5, 1e6};
     int numTests = sizeof(testValues) / sizeof(testValues[0]);
 
 
@@ -95,13 +95,6 @@ int main(void)
 
     for (int i = 0; i < numTests; i++)
         printRanking(testValues[i]);
-
-    printf("\n------------------------------------------------------\n");
-    printf("Theoretical order (n -> infinity), ignoring constants:\n");
-    printf("------------------------------------------------------\n");
-    printf(" 1/n  <  log2(n)  <  12*sqrt(n) ~ 50*n^0.5  <  n^0.51\n");
-    printf(" <  2^32*n  <  n*log2(n)  <  n^2-324 ~ 100n^2+6n\n");
-    printf(" <  2n^3  <  n^log2(n)  <  3^n\n");
 
     return 0;
 }
