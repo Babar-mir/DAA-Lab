@@ -130,7 +130,9 @@ int main(void)
     /*
      * Example 1: coin 7 is lighter.
      */
-    int n = 13;
+    int n;
+    printf("enter number of coins ");
+    scanf("%d",&n);
 
     double *weight = malloc(n * sizeof(double));
 
